@@ -48,6 +48,25 @@
             </div>
             <!-- Add more projects -->
         </section>
+
+        <section id="certificates">
+            <h2>Certificates & Courses</h2>
+            <ul>
+                <li>Full-Stack Web Development - FreeCodeCamp</li>
+                <li>UI/UX Design - Coursera</li>
+                <li>Advanced JavaScript - Udemy</li>
+            </ul>
+        </section>
+
+        <section id="testimonials">
+            <h2>Testimonials</h2>
+            <blockquote>"Very professional and creative!" – Sarah K.</blockquote>
+            <blockquote>"Delivered on time and exceeded expectations." – Ahmad R.</blockquote>
+        </section>
+
+
+        <a href="media/cv.pdf" download class="resume-btn">Download My Resume (PDF)</a>
+
     </main>
 
     <!-- Footer -->
@@ -60,5 +79,22 @@
             <a href="https://twitter.com/" target="_blank">Twitter</a>
         </p>
     </footer>
+
+    <button onclick="topFunction()" id="scrollTopBtn" title="Go to top">↑</button>
+<script>
+    var mybutton = document.getElementById("scrollTopBtn");
+    window.onscroll = function() {scrollFunction()};
+    function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        mybutton.style.display = "block";
+        } else {
+        mybutton.style.display = "none";
+        }
+    }
+    function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+    }
+</script>
 </body>
 </html>
