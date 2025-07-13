@@ -5,96 +5,103 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Personal Website</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
+
 <body>
+    <input type="checkbox" id="dark-toggle">
+    <label for="dark-toggle" class="dark-toggle-label">
+        <i class="fas fa-moon" ></i>
+    </label>
+    <div class="page-wrapper">
+
     <!-- Header Section -->
     <header>
         <nav>
-            <ul>
-                <li><a href="#bio">Bio</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#portfolio">Portfolio</a></li>
-                <li><a href="#contact">Contact</a></li>
+            <input type="checkbox" id="nav-toggle" class="nav-toggle">
+            <label for="nav-toggle" class="nav-toggle-label">
+                <span><i class="fas fa-bars"></i></span>
+            </label>
+            <ul class="nav-menu">
+                <li><a href="#bio"><i class="fas fa-user"></i> Bio</a></li>
+                <li><a href="#skills"><i class="fas fa-code"></i> Skills</a></li>
+                <li><a href="#portfolio"><i class="fas fa-briefcase"></i> Portfolio</a></li>
+                <li><a href="#certificates"><i class="fas fa-certificate"></i> Certificates</a></li>
+                <li><a href="#testimonials"><i class="fas fa-quote-left"></i> Testimonials</a></li>
+                <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
             </ul>
         </nav>
         
-        <img src="media/Avatar.jpg" alt="salah avatar" class="profile-img">
-        <h1>Salah Ali</h1>
-        <p id="bio">I am Software Engineer!</p>
+        <div class="profile-container">
+            <img src="media/Avatar.jpg" alt="salah avatar" class="profile-img">
+            <h1>Salah Ali</h1>
+            <p id="bio">I am Software Engineer!</p>
+        </div>
     </header>
+
 
     <!-- Main Content -->
     <main>
         <section id="skills">
-            <h2>My Skills</h2>
+            <h2><i class="fas fa-code"></i> My Skills</h2>
             <ul>
-                <li>Frontend: HTML, CSS, JavaScript</li>
-                <li>Backend: PHP </li>
-                <li>Version Control: Git & GitHub </li>
-                <li>C# & Sql server </li>
-                <!-- Add more skills -->
+                <li><i class="fab fa-html5"></i> Frontend: HTML, CSS, JavaScript</li>
+                <li><i class="fab fa-php"></i> Backend: PHP & MySQL</li>
+                <li><i class="fab fa-git"></i> Version Control: Git & GitHub</li>
+                <li><i class="fab fa-microsoft"></i> C# & SQL Server</li>
             </ul>
         </section>
 
         <section id="portfolio">
-            <h2>My Portfolio</h2>
-            <div class="project">
-                <h3>Sales Management</h3>
-                <p>This project is build by c# language and sql server</p>
+            <h2><i class="fas fa-briefcase"></i> My Portfolio</h2>
+            <div class="projects-grid">
+                <div class="project">
+                    <h3><i class="fas fa-shopping-cart"></i> Sales Management</h3>
+                    <p>This project is built by C# language and SQL Server</p>
+                </div>
+                <div class="project">
+                    <h3><i class="fas fa-id-card"></i> Digital Card ID</h3>
+                    <p>This project is built by HTML & CSS</p>
+                </div>
             </div>
-            <div class="project">
-                <h3>digital-card-id</h3>
-                <p>This project is build by html & css </p>
-            </div>
-            <!-- Add more projects -->
         </section>
 
         <section id="certificates">
-            <h2>Certificates & Courses</h2>
+            <h2><i class="fas fa-certificate"></i> Certificates & Courses</h2>
             <ul>
-                <li>Full-Stack Web Development - FreeCodeCamp</li>
-                <li>UI/UX Design - Coursera</li>
-                <li>Advanced JavaScript - Udemy</li>
+                <li><i class="fas fa-laptop-code"></i> Full-Stack Web Development - FreeCodeCamp</li>
+                <li><i class="fas fa-paint-brush"></i> UI/UX Design - Boot-camp</li>
+                <li><i class="fab fa-js"></i> Advanced JavaScript - Udemy</li>
             </ul>
         </section>
 
         <section id="testimonials">
-            <h2>Testimonials</h2>
-            <blockquote>"Very professional and creative!" – Sarah K.</blockquote>
-            <blockquote>"Delivered on time and exceeded expectations." – Ahmad R.</blockquote>
+            <h2><i class="fas fa-quote-left"></i> Testimonials</h2>
+            <div class="testimonials-grid">
+                <blockquote>"Very professional and creative!" - Sarah K.</blockquote>
+                <blockquote>"Delivered on time and exceeded expectations." - Ahmad R.</blockquote>
+            </div>
         </section>
 
-
-        <a href="media/cv.pdf" download class="resume-btn">Download My Resume (PDF)</a>
-
+        <div class="resume-container">
+            <a href="media/cv.pdf" download class="resume-btn">
+                <i class="fas fa-download"></i> Download My Resume (PDF)
+            </a>
+        </div>
     </main>
 
     <!-- Footer -->
     <footer id="contact">
-        <h2>Contact Me</h2>
-        <p>Email: salahsoft2024@gmail.com</p>
-        <p>
-            <a href="https://github.com/SalahAli2023" target="_blank">GitHub</a> | 
-            <a href="https://linkedin.com/" target="_blank">LinkedIn</a> | 
-            <a href="https://twitter.com/" target="_blank">Twitter</a>
-        </p>
+        <h2><i class="fas fa-envelope"></i> Contact Me</h2>
+        <p><i class="fas fa-envelope"></i> Email: salahsoft2024@gmail.com</p>
+        <div class="social-links">
+            <a href="https://github.com/SalahAli2023" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://linkedin.com/" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a>
+        </div>
     </footer>
 
-    <button onclick="topFunction()" id="scrollTopBtn" title="Go to top">↑</button>
-<script>
-    var mybutton = document.getElementById("scrollTopBtn");
-    window.onscroll = function() {scrollFunction()};
-    function scrollFunction() {
-        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-        mybutton.style.display = "block";
-        } else {
-        mybutton.style.display = "none";
-        }
-    }
-    function topFunction() {
-        document.body.scrollTop = 0;
-        document.documentElement.scrollTop = 0;
-    }
-</script>
+    <a href="#" id="scrollTopBtn" title="Go to top"><i class="fas fa-arrow-up"></i></a>
+</div>
 </body>
 </html>
