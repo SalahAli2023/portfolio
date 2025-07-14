@@ -96,8 +96,10 @@ header p {
     background-color: var(--nav-bg);
     border-radius: 50px;
     margin: 0 auto 2rem;
-    max-width: 800px;
+    max-width: 1000px;
     box-shadow: var(--shadow);
+    align-content: center;
+    flex-wrap: wrap;
 }
 
 .nav-menu li {
@@ -375,6 +377,19 @@ footer {
     h2 {
         font-size: 1.5rem;
     }
+}
+
+#dark-toggle:not(:checked) ~ .page-wrapper .fa-moon {
+    display: inline;
+}
+#dark-toggle:not(:checked) ~ .page-wrapper  .fa-sun{
+    display: none;
+}
+#dark-toggle:checked ~ .page-wrapper  .fa-moon{
+    display: none;
+}
+#dark-toggle:checked ~ .page-wrapper .fa-sun {
+    display: inline;
 }
 
 #dark-toggle {
