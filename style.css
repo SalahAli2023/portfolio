@@ -397,13 +397,21 @@ footer {
 }
 
 .dark-toggle-label {
+    top: 33px;
+    right: 60px;
+    width: 32px;
+    height: 32px;
+    align-items: center;
     position: fixed;
-    top: 20px;
-    right: 20px;
     font-size: 22px;
     cursor: pointer;
     z-index: 999;
     color: var(--text-color);
+    background-color: var(--bg-color);
+    border-radius: 50%;
+    display: flex;
+    justify-content:center;
+    opacity: 80%;
 }
 
 #dark-toggle:checked ~ .page-wrapper {
